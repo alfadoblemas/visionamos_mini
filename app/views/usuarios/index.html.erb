@@ -1,0 +1,39 @@
+<h1>Listing usuarios</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Nombre</th>
+      <th>Apellido</th>
+      <th>Nombre completo</th>
+      <th>Tipo identificacion</th>
+      <th>Nro identificacion</th>
+      <th>Email</th>
+      <th>Tipo usuario</th>
+      <th>Agencia</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @usuarios_decorated.each do |usuario| %>
+      <tr>
+        <td><%= usuario.nombre %></td>
+        <td><%= usuario.apellido %></td>
+        <td><%= usuario.nombre_completo %></td>
+        <td><%= usuario.tipo_identificacion_label %></td>
+        <td><%= usuario.nro_identificacion %></td>
+        <td><%= usuario.email %></td>
+        <td><%= usuario.tipo_usuario %></td>
+        <td><%= usuario.agencia %></td>
+        <td><%= link_to 'Show', usuario.object %></td>
+        <td><%= link_to 'Edit', edit_usuario_path(usuario.object) %></td>
+        <td><%= link_to 'Destroy', usuario.object, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Usuario', new_usuario_path %>

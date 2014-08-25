@@ -1,0 +1,45 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Nombre:</strong>
+  <%= @usuario.nombre %>
+</p>
+
+<p>
+  <strong>Apellido:</strong>
+  <%= @usuario.apellido %>
+</p>
+
+<p>
+  <strong>Tipo identificacion:</strong>
+  <%= @usuario.tipo_identificacion %>
+</p>
+
+<p>
+  <strong>Nro identificacion:</strong>
+  <%= @usuario.nro_identificacion %>
+</p>
+
+<p>
+  <strong>Nombre completo:</strong>
+  <%= @usuario_decorated.nombre_completo %>
+</p>
+
+
+<p>
+  <strong>Email:</strong>
+  <%= @usuario.email %>
+</p>
+
+<p>
+  <strong>Tipo usuario:</strong>
+  <%= @usuario.tipo_usuario %>
+</p>
+
+<p>
+  <strong>Agencia:</strong>
+  <%= @usuario.agencia %>
+</p>
+
+<%= link_to 'Edit', edit_usuario_path(@usuario) %> |
+<%= link_to 'Back', usuarios_path %>

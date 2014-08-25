@@ -1,0 +1,41 @@
+<%= form_for(@agencia) do |f| %>
+  <% if @agencia.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@agencia.errors.count, "error") %> prohibited this agencia from being saved:</h2>
+
+      <ul>
+      <% @agencia.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= f.label :nombre %><br>
+    <%= f.text_field :nombre %>
+  </div>
+  <div class="field">
+    <%= f.label :direccion %><br>
+    <%= f.text_field :direccion %>
+  </div>
+  <div class="field">
+    <%= f.label :nit %><br>
+    <%= f.text_field :nit %>
+  </div>
+  <div class="field">
+    <%= f.label :telefono %><br>
+    <%= f.text_field :telefono %>
+  </div>
+  <div class="field">
+    <%= f.label :estado %><br>
+    <%= f.number_field :estado %>
+  </div>
+  <div class="field">
+    <%= f.label :nombre_director %><br>
+    <%= f.text_field :nombre_director %>
+  </div>
+  <div class="actions">
+    <%= f.submit %>
+  </div>
+<% end %>
